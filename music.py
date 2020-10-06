@@ -15,12 +15,10 @@ def main():
         'List of styles of music: N\u2013R',
         'List of styles of music: S\u2013Z'
     ]
-    averages = dict()
     for page in pages:
         genres.update(get_genres(page))
     for genre in sorted(genres):
-        averages.update({genre : bpm_avg(get_songs(genre))})
-        print(averages)
+        print(genre, bpm_avg(get_songs(genre)))
 
 def get_songs(tag):
     ''' Query API for songs and artists given a genre '''
