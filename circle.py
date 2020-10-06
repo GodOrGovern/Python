@@ -3,7 +3,6 @@
 from time import sleep
 from random import randint, uniform
 from graphics import Circle, GraphWin, Point
-from multiprocessing import Process
 
 class NewCircle(Circle):
     def __init__(self, center, radius, velocity):
