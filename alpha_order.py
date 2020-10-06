@@ -35,7 +35,7 @@ def helper(letters, graph, order=''):
         found.update(nodes)
     not_found = letters.difference(found)
     length = len(not_found)
-    if length == 0 or length > 1:
+    if length != 1:
         return None
     next_node = not_found.pop()
     letters.remove(next_node)
